@@ -34,9 +34,6 @@ TARGET_BOARD_PLATFORM_GPU := qcom-adreno330
 # Build with Clang by default
 USE_CLANG_PLATFORM_BUILD := true
 
-#Block Building
-BLOCK_BASED_OTA := true
-
 # Architecture
 TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv7-a-neon
