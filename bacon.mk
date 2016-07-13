@@ -81,10 +81,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
-# Gello
-PRODUCT_PACKAGES += \
-    Gello
-
 # Graphics
 PRODUCT_PACKAGES += \
     copybit.msm8974 \
@@ -115,6 +111,11 @@ PRODUCT_PACKAGES += \
 # Lights
 PRODUCT_PACKAGES += \
     lights.msm8974
+
+# Limit dex2oat threads to improve thermals
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.dex2oat-threads=2 \
+    dalvik.vm.image-dex2oat-threads=4
 
 # Media profile
 PRODUCT_COPY_FILES += \
@@ -247,6 +248,10 @@ $(call inherit-product-if-exists, vendor/oneplus/bacon/bacon-vendor.mk)
 ifneq ($(QCPATH),)
 $(call inherit-product-if-exists, $(QCPATH)/prebuilt_HY11/target/product/msm8974/prebuilt.mk)
 endif
+
+# Doze
+PRODUCT_PACKAGES += \
+    OnePlusDoze
 
 # Inherit from oppo-common
 $(call inherit-product, device/oppo/common/common.mk)

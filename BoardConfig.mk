@@ -55,6 +55,7 @@ TARGET_KERNEL_ARCH := arm
 TARGET_KERNEL_CONFIG := cyanogenmod_bacon_defconfig
 TARGET_KERNEL_SOURCE := kernel/oneplus/msm8974
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-linux-androideabi-
+KERNEL_VERSION := NoSpamDan_v1
 
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
@@ -134,6 +135,7 @@ TARGET_USES_C2D_COMPOSITION := true
 TARGET_USES_ION := true
 USE_OPENGL_RENDERER := true
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
+TARGET_USES_ALT_DOZE := false
 
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_bacon
